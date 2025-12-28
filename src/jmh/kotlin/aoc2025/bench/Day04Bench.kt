@@ -1,5 +1,6 @@
 package aoc2025.bench
 
+import aoc2025.days.Day04
 import aoc2025.net.AocNet
 import aoc2025.registry.DayRegistry
 import aoc2025.registry.Solution

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 open class Day01Bench {
 
     private lateinit var input: List<String>
-    private lateinit var day: Day01
+    private lateinit var solution: Day01
 
     @Setup(Level.Trial)
     fun setup() {
