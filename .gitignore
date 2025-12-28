@@ -1,0 +1,60 @@
+# =========================
+# Kotlin / Gradle
+# =========================
+.gradle/
+build/
+out/
+**/build/
+**/out/
+
+# Gradle wrapper (keep the wrapper JAR + scripts in git)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin compiler / KSP
+.kotlin/
+.ksp/
+ksp/
+
+# =========================
+# IntelliJ IDEA / JetBrains
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IntelliJ build output (if enabled)
+.idea/out/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Advent of Code inputs
+# =========================
+# Keep the folder but ignore contents (inputs are personal)
+input/*
+!input/.gitkeep
+
+# Also ignore AoC session token files if you ever create any
+.env
+.env.*
+*.env
+
+# =========================
+# JMH outputs
+# =========================
+jmh-result.json
+jmh-result.csv
+jmh-result.txt
+jmh-results/

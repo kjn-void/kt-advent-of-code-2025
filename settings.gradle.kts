@@ -1,0 +1,1 @@
+rootProject.name = "kt-advent-of-code-2025"
