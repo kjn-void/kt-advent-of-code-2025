@@ -32,11 +32,13 @@ class Day10 : Solution {
 
         for (rawLine in lines) {
             val line = rawLine.trim()
-            if (line.isEmpty()) continue
+            if (line.isEmpty())
+                continue
 
             val lb = line.indexOf('[')
             val rb = line.indexOf(']')
-            if (lb == -1 || rb == -1 || rb <= lb) continue
+            if (lb == -1 || rb == -1 || rb <= lb)
+                continue
 
             val lightStr = line.substring(lb + 1, rb)
             val lights = IntArray(lightStr.length) {
@@ -47,9 +49,13 @@ class Day10 : Solution {
                 if ('{' in line) {
                     val s = line.indexOf('{')
                     val e = line.indexOf('}', s + 1)
-                    if (e > s) parseIntList(line.substring(s, e + 1)).toIntArray()
-                    else IntArray(0)
-                } else IntArray(0)
+                    if (e > s)
+                        parseIntList(line.substring(s, e + 1)).toIntArray()
+                    else 
+                        IntArray(0)
+                } else { 
+                    IntArray(0)
+                }
 
             val mid = if ('{' in line) line.substring(rb + 1, line.indexOf('{')) else line.substring(rb + 1)
 
@@ -89,9 +95,7 @@ class Day10 : Solution {
         try {
             val futures = machines
                 .filter { it.targetJoltage.isNotEmpty() && it.buttons.isNotEmpty() }
-                .map { m ->
-                    pool.submit(Callable { solveJoltage(m) })
-                }
+                .map { m -> pool.submit(Callable { solveJoltage(m) })}
 
             var total = 0
             for (f in futures) {

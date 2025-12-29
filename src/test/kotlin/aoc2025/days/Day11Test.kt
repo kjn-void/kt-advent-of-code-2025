@@ -1,16 +1,10 @@
 package aoc2025.days
 
+import aoc2025.splitLines
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 class Day11Test {
-
-    private fun splitLines(s: String): List<String> =
-        s.trimIndent()
-            .lines()
-            .map { it.trimEnd() }
-            .filter { it.isNotEmpty() }
-
     @Test
     fun part1_example() {
         val input = splitLines(

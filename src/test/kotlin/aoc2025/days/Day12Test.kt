@@ -1,5 +1,6 @@
 package aoc2025.days
 
+import aoc2025.splitLines
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -40,12 +41,6 @@ private const val day12Example = """
 """
 
 class Day12Test {
-    private fun splitLines(s: String): List<String> =
-        s.trimIndent()
-            .lines()
-            .map { it.trimEnd() }
-            .filter { it.isNotEmpty() }
-
     @Test
     fun part1_example() {
         val d = Day12()
